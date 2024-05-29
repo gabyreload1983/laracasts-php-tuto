@@ -3,7 +3,7 @@
 $id = $_GET["id"];
 $name = "Note {$id}";
 
-$config = require "config.php"; 
+$config = require base_path("config.php"); 
 $db = new Database($config["database"]);
 
 
@@ -17,4 +17,7 @@ $currentUserId = 1;
 
 authorize($note["user_id"] === $currentUserId);
 
-require "views/notes/show.view.php"; 
+view("notes/show.view.php", [
+    "name" => $name,
+    "note" => $note
+]);
