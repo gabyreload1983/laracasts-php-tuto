@@ -11,4 +11,4 @@ $currentUserId = 1;
 
 $notes = $db->query($query,[$currentUserId])->get();
 
-require "views/notes.view.php"; 
+require "views/notes/index.view.php"; 
