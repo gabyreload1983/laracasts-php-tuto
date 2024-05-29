@@ -7,6 +7,8 @@ $db = new Database($config["database"]);
 
 $query = "SELECT * FROM notes WHERE user_id = ?";
 
-$notes = $db->query($query,[1])->get();
+$currentUserId = 1;
+
+$notes = $db->query($query,[$currentUserId])->get();
 
 require "views/notes.view.php"; 

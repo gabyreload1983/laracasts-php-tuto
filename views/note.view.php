@@ -5,7 +5,7 @@
 <main>
     <div class="mx-auto max-w-7xl py-6">
         <a class="text-blue-500 hover:text-blue-700" href="/notes">Go Back...</a>
-        <p><?= $note["body"] ?></p>
+        <p><?= htmlspecialchars($note["body"]) ?></p>
     </div>
 </main>
 
