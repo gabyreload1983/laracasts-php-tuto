@@ -1,13 +1,14 @@
 <?php
-use Core\Database;
+
+use Core\App;
 use Core\Validator;
 
 
 $currentUser = 1;
 $errors = [];
 
-$config = require base_path("config.php"); 
-$db = new Database($config["database"]);
+
+$db = App::resolve('Core\Database');
 
 
 if(! Validator::string($_POST["body"], 1, 1000)){

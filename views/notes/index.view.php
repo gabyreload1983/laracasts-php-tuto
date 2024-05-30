@@ -3,10 +3,10 @@
 <?php require base_path("views/partials/header.php") ?>
 
 <main>
-    <div class="mx-auto max-w-7xl py-6">
+    <div class="mx-auto max-w-3xl py-6">
         <ul class="p-5">
             <?php foreach($notes as $note) : ?>
-            <li>
+            <li class="bg-lime-200 rounded p-3 mb-3">
                 <a class="hover:text-green-600" href="/note?id=<?= $note["id"] ?>">
                     <?= htmlspecialchars($note["body"]) ?>
                 </a>
