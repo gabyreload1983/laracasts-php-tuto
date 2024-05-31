@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="h-full">
 
 <head>
     <meta charset="UTF-8">
@@ -8,4 +8,4 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 </head>
 
-<body>
+<body class="h-full">
