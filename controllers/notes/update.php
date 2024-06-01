@@ -19,7 +19,7 @@ $note = $db->query("SELECT * FROM notes WHERE id = :id",[
 
 authorize($note["user_id"] === $currentUserId);
 
-if(! Validator::string($body, 1, 1000)){
+if(!Validator::string($body, 1, 1000)){
     $errors["body"] = "A body of no more than 1000 characters is required.";
  }
  
