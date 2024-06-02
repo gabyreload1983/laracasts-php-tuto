@@ -19,7 +19,7 @@ if(!Validator::string($password)){
 }
 
 if(!empty($errors)){
-    return view("sessions/create.view.php",[
+    return view("session/create.view.php",[
         "errors" => $errors,
     ]);
 }
@@ -38,7 +38,7 @@ if($user && password_verify($password,$user["password"])){
 }
 
 
-return view("sessions/create.view.php",[
+return view("session/create.view.php",[
     "errors" => [
         "password" => "Email or password is wrong"
     ],
