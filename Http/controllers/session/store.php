@@ -20,6 +20,10 @@ if($form->validate($email, $password)){
     $form->error( "password", "Email or password is wrong");
 }
 
+Session::flash("old",[
+    "email" => $email,
+]);
+
 Session::flash("errors", $form->errors());
 
 return redirect("/login");
